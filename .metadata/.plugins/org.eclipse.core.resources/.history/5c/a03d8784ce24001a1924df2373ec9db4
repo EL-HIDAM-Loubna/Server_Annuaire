@@ -1,0 +1,5 @@
+package aiac.project.dao;
+
+public interface IPersonne {
+
+}

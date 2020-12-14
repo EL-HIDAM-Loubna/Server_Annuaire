@@ -1,0 +1,8 @@
+package aiac.project.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import aiac.project.entities.Personne;
+
+public interface IPersonne extends JpaRepository<Personne, Integer> {
+	
+}

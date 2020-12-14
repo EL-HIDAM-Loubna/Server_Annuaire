@@ -1,0 +1,5 @@
+package aiac.project.entities;
+
+public class Personne {
+
+}

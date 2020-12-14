@@ -1,0 +1,30 @@
+package aiac.project.controller;
+
+import aiac.project.dao.IPersonne;
+import aiac.project.entities.Personne;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PersonneController {
+	
+	@Autowired
+	IPersonne personne;
+	
+	@GetMapping(path = "/")
+	public void helloWorld() {
+		System.out.println("Hello!");
+	}
+	
+	@GetMapping(path = "/annuaire",produces = {"application/json"})
+	public List<Personne> findAll(){
+		return personne.findAll();
+	}
+		
+}

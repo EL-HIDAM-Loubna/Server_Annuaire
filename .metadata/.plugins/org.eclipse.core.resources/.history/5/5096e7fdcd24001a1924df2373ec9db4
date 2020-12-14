@@ -1,0 +1,12 @@
+package aiac.project.entities;
+
+import javax.persistence.Entity;
+
+@Entity(name="personne")
+public class Personne {
+	
+	private int id;
+	private String nom;
+	private String bureau;
+
+}
